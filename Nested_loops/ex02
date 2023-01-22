@@ -1,0 +1,19 @@
+print("Please enter a sequence:")
+sequence = input()
+
+print("Please enter the character for the marker:")
+marker = input()
+
+marker_1_position = -1
+marker_2_position = -1
+
+for position in range(0, len(sequence), 1):
+    letter = sequence[position]
+
+    if (letter == marker):
+        if (marker_1_position == -1):
+            marker_1_position = position
+        else:
+            marker_2_position = position
+
+print(f"The distance between the markers is {marker_2_position - marker_1_position - 1}.")
